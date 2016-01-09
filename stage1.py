@@ -213,7 +213,7 @@ WRW_list = np.zeros((k, ))
 weight_list = np.zeros((k, ))
 for i in range(k) : cluster_list.append([]); accum_dist_list.append([]); accum_weight_list.append([])
 for row in reader :
-	if row[0] == 'GiftId' : continue 
+	if row[0] == 'GiftId' or row[0] == 'TripId' : continue 
 	cluster_list[int(row[1])-1].append(int(row[0])-1)
 	assign_list[int(row[0])-1] = int(row[1])-1
 
